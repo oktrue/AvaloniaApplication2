@@ -1,0 +1,11 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:s="clr-namespace:System;assembly=System.Runtime">
+	
+	<s:String x:Key="LoginTitle">Вход</s:String>
+	<s:String x:Key="LoginButton">ВОЙТИ</s:String>
+	<s:String x:Key="Username">Имя пользователя</s:String>
+	<s:String x:Key="Password">Пароль</s:String>
+	<s:String x:Key="LoginFailed">Неверное имя пользователя или пароль</s:String>
+	<s:String x:Key="CloseToolTip">Закрыть</s:String>
+</ResourceDictionary>

@@ -1,0 +1,157 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaApplication2.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:icons="using:AvaloniaApplication2.Icons"
+        mc:Ignorable="d"
+        x:Class="AvaloniaApplication2.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AvaloniaApplication2" Width="398" SizeToContent="Height" CanResize="False" FontFamily="/Assets/Fonts#Ubuntu">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<Grid Grid.Row="1">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="40" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="40" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="40" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="40" />
+				<RowDefinition Height="50" />
+				<RowDefinition Height="30" />
+				<RowDefinition Height="50" />
+				<RowDefinition Height="10" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="30" />
+				<RowDefinition Height="50" />
+				<RowDefinition Height="40" />
+			</Grid.RowDefinitions>
+
+			<TextBlock Grid.Column="1" Grid.Row="1" Text="{DynamicResource LoginTitle}" FontSize="50" />
+
+			<Grid Grid.Column="1" Grid.Row="3">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="50" />
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+
+				<Border Background="{DynamicResource NormalTabBrush}">
+					<icons:User Foreground="White" Margin="13" Opacity="0.8" VerticalAlignment="Center" HorizontalAlignment="Center" />
+				</Border>
+
+				<Border Grid.Column="1">
+					<Border.Styles>
+						<Style Selector="Border">
+							<Setter Property="Background" Value="{DynamicResource TextBoxBackground}"/>
+							<!--<Style.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Background" Value="{DynamicResource FocusedTextBoxBackground}"/>
+								</Trigger>
+								<DataTrigger Binding="{Binding ElementName=Login, Path=IsMouseOver}" Value="True">
+									<Setter Property="Background" Value="{DynamicResource FocusedTextBoxBackground}"/>
+								</DataTrigger>
+								<DataTrigger Binding="{Binding ElementName=Login, Path=IsKeyboardFocused}" Value="True">
+									<Setter Property="Background" Value="{DynamicResource FocusedTextBoxBackground}"/>
+								</DataTrigger>
+								<DataTrigger Binding="{Binding ElementName=PreviewLogin, Path=IsMouseOver}" Value="True">
+									<Setter Property="Background" Value="{DynamicResource FocusedTextBoxBackground}"/>
+								</DataTrigger>
+							</Style.Triggers>-->
+						</Style>
+					</Border.Styles>
+
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*" />
+							<ColumnDefinition Width="Auto" />
+						</Grid.ColumnDefinitions>
+
+						<TextBox x:Name="Login" CaretBrush="{DynamicResource WindowForeground}" Foreground="{DynamicResource WindowForeground}" Background="Transparent" Height="50" VerticalAlignment="Center" Padding="12,0" FontSize="18" VerticalContentAlignment="Center" BorderThickness="0">
+							<!--<i:Interaction.Triggers>
+								<i:EventTrigger EventName="TextChanged">
+									<prism:InvokeCommandAction Command="{Binding HideIncorrectCommand}" />
+								</i:EventTrigger>
+							</i:Interaction.Triggers>-->
+						</TextBox>
+
+						<TextBox x:Name="PreviewLogin" Foreground="{DynamicResource WindowForeground}" Background="Transparent" Padding="12,0" FontSize="18" VerticalContentAlignment="Center" BorderThickness="0" Text="{DynamicResource Username}"/>
+						<icons:Warning x:Name="LoginWarning" Grid.Column="1" Width="24" Margin="0,0,14,0" VerticalAlignment="Center" HorizontalAlignment="Center" />
+					</Grid>
+				</Border>
+			</Grid>
+
+			<Grid Grid.Column="1" Grid.Row="5">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="50" />
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+
+				<Border Background="{DynamicResource NormalTabBrush}">
+					<icons:Password Foreground="White" Margin="13" Opacity="0.8" VerticalAlignment="Center" HorizontalAlignment="Center" />
+				</Border>
+
+				<Border Grid.Column="1">
+					<Border.Styles>
+						<Style Selector="Border">
+							<Setter Property="Background" Value="{DynamicResource TextBoxBackground}"/>
+							<!--<Style.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Background" Value="{DynamicResource FocusedTextBoxBackground}"/>
+								</Trigger>
+								<DataTrigger Binding="{Binding ElementName=Password, Path=IsMouseOver}" Value="True">
+									<Setter Property="Background" Value="{DynamicResource FocusedTextBoxBackground}"/>
+								</DataTrigger>
+								<DataTrigger Binding="{Binding ElementName=Password, Path=IsKeyboardFocused}" Value="True">
+									<Setter Property="Background" Value="{DynamicResource FocusedTextBoxBackground}"/>
+								</DataTrigger>
+								<DataTrigger Binding="{Binding ElementName=PreviewPassword, Path=IsMouseOver}" Value="True">
+									<Setter Property="Background" Value="{DynamicResource FocusedTextBoxBackground}"/>
+								</DataTrigger>
+							</Style.Triggers>-->
+						</Style>
+					</Border.Styles>
+
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*" />
+							<ColumnDefinition Width="Auto" />
+						</Grid.ColumnDefinitions>
+
+						<TextBox x:Name="Password" CaretBrush="{DynamicResource WindowForeground}" Foreground="{DynamicResource WindowForeground}" Background="Transparent" Padding="12,0" FontSize="18" VerticalContentAlignment="Center" BorderThickness="0">
+							<!--<i:Interaction.Triggers>
+								<i:EventTrigger EventName="PasswordChanged">
+									<i:InvokeCommandAction Command="{Binding HideIncorrectCommand}" />
+								</i:EventTrigger>
+							</i:Interaction.Triggers>-->
+						</TextBox>
+
+						<TextBox x:Name="PreviewPassword" Foreground="{DynamicResource WindowForeground}" Background="Transparent" Padding="12,0" FontSize="18" VerticalContentAlignment="Center" BorderThickness="0" Text="{DynamicResource Password}"/>
+						<icons:Warning x:Name="PasswordWarning" Grid.Column="1" Width="24" Margin="0,0,14,0" VerticalAlignment="Center" HorizontalAlignment="Center" />
+					</Grid>
+				</Border>
+			</Grid>
+
+			<TextBlock x:Name="IncorrectText" Grid.Column="1" Grid.Row="7" Text="{DynamicResource LoginFailed}" FontSize="14" Foreground="{StaticResource RedBrush}" />
+			<Button Command="{Binding LoginCommand}" Classes="h1" Grid.Column="1" Grid.Row="9" Content="{DynamicResource LoginButton}" IsDefault="True" Background="{DynamicResource NormalTabBrush}" FontSize="18" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+		</Grid>
+
+		<!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+			<Button Content="en-EN" Width="50" Background="{DynamicResource NormalTabBrush}"/>
+			<Button Content="Тёмная тема" Width="90" Margin="8,0" Background="{DynamicResource NormalTabBrush}"/>
+			<Button IsCancel="True"/>
+		</StackPanel>-->
+	</Grid>
+
+</Window>

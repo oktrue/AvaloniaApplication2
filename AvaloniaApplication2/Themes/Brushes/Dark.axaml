@@ -1,0 +1,27 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<SolidColorBrush x:Key="ActiveTabBrush" Color="#028CCC"/>
+	<SolidColorBrush x:Key="HoverTabBrush" Color="#00A4F0"/>
+	<SolidColorBrush x:Key="NormalTabBrushInternal" Color="#595959"/>
+	<SolidColorBrush x:Key="DarkGrayTabBrush" Color="#343434"/>
+	<SolidColorBrush x:Key="LightGrayBrush" Color="#F2F2F2"/>
+	<SolidColorBrush x:Key="LightGrayButtonBrush" Color="#F6F6F6"/>
+	<SolidColorBrush x:Key="GrayBorderBrush" Color="#D8D8D8"/>
+	<SolidColorBrush x:Key="GreenBrush" Color="#7ED321"/>
+	<SolidColorBrush x:Key="RedBrush" Color="#FF5050"/>
+	<SolidColorBrush x:Key="YellowBrush" Color="#F9C22E"/>
+
+	<SolidColorBrush x:Key="NormalTabBrush" Color="#028CCC"/>
+	<SolidColorBrush x:Key="WindowBackground" Color="#343434"/>
+	<SolidColorBrush x:Key="WindowForeground" Color="White"/>
+	<SolidColorBrush x:Key="WindowBorderBrush" Color="#028CCC"/>
+	<SolidColorBrush x:Key="ButtonBackground" Color="#028CCC"/>
+	<SolidColorBrush x:Key="SystemButtonForeground" Color="White"/>
+	<SolidColorBrush x:Key="CloseButtonMouseOverBackground" Color="#FF5050"/>
+	<SolidColorBrush x:Key="CloseButtonMouseOverForeground" Color="White"/>
+	<SolidColorBrush x:Key="CloseButtonMousePressedBackground" Color="#FF5050"/>
+	<SolidColorBrush x:Key="CloseButtonMousePressedForeground" Color="White"/>
+	<SolidColorBrush x:Key="TextBoxBackground" Color="#4B4B4B"/>
+	<SolidColorBrush x:Key="FocusedTextBoxBackground" Color="#585858"/>
+</ResourceDictionary>

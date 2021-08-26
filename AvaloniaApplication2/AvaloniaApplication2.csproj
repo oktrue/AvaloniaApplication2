@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <AvaloniaResource Include="Assets\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\Fonts\Ubuntu-Bold.ttf" />
+    <None Remove="Assets\Fonts\Ubuntu-BoldItalic.ttf" />
+    <None Remove="Assets\Fonts\Ubuntu-Italic.ttf" />
+    <None Remove="Assets\Fonts\Ubuntu-Light.ttf" />
+    <None Remove="Assets\Fonts\Ubuntu-LightItalic.ttf" />
+    <None Remove="Assets\Fonts\Ubuntu-Medium.ttf" />
+    <None Remove="Assets\Fonts\Ubuntu-MediumItalic.ttf" />
+    <None Remove="Assets\Fonts\Ubuntu-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.7" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.7" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.7" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.7" />
+  </ItemGroup>
+</Project>

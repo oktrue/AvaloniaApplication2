@@ -1,0 +1,24 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:AvaloniaApplication2"
+			 xmlns:sys="using:System"
+             x:Class="AvaloniaApplication2.App">
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <FluentTheme Mode="Light"/>
+		<StyleInclude Source='/Themes/Generic.axaml'/>		
+    </Application.Styles>
+
+	<Application.Resources>
+		<!--<FontFamily x:Key="Ubuntu">avares://AvaloniaApplication2/Assets/Fonts#Ubuntu</FontFamily>-->
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceInclude Source='/Localization/ru-RU.axaml'/>
+				<ResourceInclude Source='/Themes/Brushes/Light.axaml'/>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

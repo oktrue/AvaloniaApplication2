@@ -1,0 +1,12 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:s="clr-namespace:System;assembly=System.Runtime">
+
+	<s:String x:Key="msgDeletingUser">Вы уверены, что хотите удалить пользователя?</s:String>
+	<s:String x:Key="msgNewProject">Все несохраненные изменения в проекте будут потеряны. Вы уверены, что хотите создать новый проект?</s:String>
+	<s:String x:Key="msgReverse">Номинальные координаты будут перезаписаны для всех стоек. Вы уверены, что хотите продолжить?</s:String>
+	<s:String x:Key="msgRemoveImage">Вы уверены, что хотите удалить изображение?</s:String>
+	<s:String x:Key="msgRemoveJig">Вы уверены, что хотите удалить стойку '{0}'</s:String>
+	<s:String x:Key="msgProjectNoDescription">У проекта нет описания...</s:String>
+	<s:String x:Key="msgProjectNotLoaded">Проект не загружен. Загрузите или создайте проект для начала работы...</s:String>
+</ResourceDictionary>

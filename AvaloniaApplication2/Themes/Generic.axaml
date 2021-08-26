@@ -1,0 +1,25 @@
+<Styles xmlns="https://github.com/avaloniaui">
+	<Style Selector="Button.h1">
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="Template">
+			<ControlTemplate>
+				<ContentPresenter Name="PART_ContentPresenter"
+					  Background="{TemplateBinding Background}"
+					  BorderBrush="{TemplateBinding BorderBrush}"
+					  BorderThickness="0"
+					  CornerRadius="0"
+					  ContentTemplate="{TemplateBinding ContentTemplate}"
+					  Content="{TemplateBinding Content}"
+					  Padding="{TemplateBinding Padding}"
+					  TextBlock.Foreground="{TemplateBinding Foreground}"
+					  HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+					  VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+			</ControlTemplate>
+		</Setter>
+	</Style>
+
+	<Style Selector="Button.h1:pointerover /template/ ContentPresenter">
+		<Setter Property="Background" Value="{DynamicResource HoverTabBrush}"/>
+		<Setter Property="TextBlock.Foreground" Value="White"/>
+	</Style>
+</Styles>
